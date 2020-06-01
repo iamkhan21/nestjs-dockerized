@@ -9,4 +9,4 @@ RUN yarn install
 # Открываем порт 3000
 EXPOSE 3000
 # Запускаем React-приложение после запуска контейнера
-CMD ["yarn", "start"]
+CMD ["yarn", "start:dev"]
