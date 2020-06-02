@@ -11,6 +11,7 @@ services:
 
 install:
   # Install dependencies for tests
+  - echo "${HOST}" | base64 -d >> $HOME/.ssh/known_hosts
   - npm ci
 
 script:
