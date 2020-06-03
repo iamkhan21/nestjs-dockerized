@@ -11,7 +11,8 @@ services:
 
 install:
   # Install dependencies for tests
-  - echo "${HOST}" | base64 -d >> $HOME/.ssh/known_hosts
+  - echo -e "Host $INSTANCE\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - sudo snap install doctl
   - npm ci
 
 script:
